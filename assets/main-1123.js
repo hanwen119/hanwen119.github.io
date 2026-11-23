@@ -298,7 +298,7 @@ const n = {
       {
         id: "muffin",
         title: "瑪芬口味測驗",
-        text: "我原本就在用的 9 題測驗，幫妳看天賦比較靠近哪一種在家工作的路。",
+        text: "免費天賦測驗，幫妳找出最適合的在家創收路線",
         url: "https://hanwen119.github.io/muffin-quiz/",
         linePrompt: "我測完瑪芬了",
       },
