@@ -300,6 +300,7 @@ const n = {
         title: "瑪芬口味測驗",
         text: "免費天賦測驗，幫妳找出最適合的在家創收路線",
         url: "https://hanwen119.github.io/muffin-quiz/",
+        cta: "我要這個",
         linePrompt: "我測完瑪芬了",
       },
       {
@@ -650,7 +651,7 @@ function P() {
       .map((t) => {
         const o = t.url || f(t.linePrompt),
           i = !!t.url,
-          r = i ? "打開這個工具" : t.cta || h(t.linePrompt);
+          r = i ? t.cta || "打開這個工具" : t.cta || h(t.linePrompt);
         return `<article class="resource">
         <h3>${s(t.title)}</h3>
         <p>${s(t.text)}</p>
