@@ -644,7 +644,7 @@ function $(e, t) {
       : `<a href="${s(e)}" target="_blank" rel="noopener noreferrer">看${o}的短片</a>`;
 }
 function P() {
-  const e = l("#resources");
+  const e = l("#resources-list");
   e &&
     (e.innerHTML = n.resources
       .map((t) => {
