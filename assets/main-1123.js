@@ -254,9 +254,16 @@ const n = {
       cta: "用 LINE 詢問報價",
       portfolioTitle: "團隊作品",
       portfolio: [
-        { id: "work-1", title: "", url: "", visible: !1 },
-        { id: "work-2", title: "", url: "", visible: !1 },
-        { id: "work-3", title: "", url: "", visible: !1 },
+        {
+          id: "chung-gaoshu-bakery",
+          title: "在地產業宣傳影片",
+          kicker: "立法委員",
+          topic: "鍾佳濱｜屏東高樹・深麥麵包店",
+          views: "觀看 25 萬",
+          url: "https://www.facebook.com/reel/2247862582715143",
+          image: "./photos/portfolio-gaoshu-bakery.jpg",
+          visible: !0,
+        },
       ],
     },
     stats: [
@@ -543,6 +550,7 @@ function A() {
       <h2>${s(t.proofTitle)}</h2>
       <ul class="proof-list">${proof}</ul>
     </section>
+    <section id="b2b-portfolio" class="b2b-portfolio" hidden></section>
     <section class="b2b-testimonials">
       <h2>${s(t.testimonialsTitle)}</h2>
       <div class="quotes">${tms}</div>
@@ -552,7 +560,6 @@ function A() {
     <div class="stack">
       <a class="btn" href="${s(t.lineUrl || f())}">${s(t.cta)}</a>
     </div>
-    <section id="b2b-portfolio" class="b2b-portfolio" hidden></section>
   `;
   N();
 }
@@ -564,16 +571,34 @@ function N() {
     ((e.innerHTML = ""), (e.hidden = !0));
     return;
   }
-  ((e.hidden = !1),
-    (e.innerHTML = `<h2>${s(n.b2b.portfolioTitle)}</h2>
-    <div class="quotes">${t
-      .map(
-        (o) => `<figure class="quote">
-          ${o.title ? `<h3>${s(o.title)}</h3>` : ""}
-          <div class="player">${$(o.url, o.title || "團隊作品")}</div>
-        </figure>`,
-      )
-      .join("")}</div>`));
+  e.hidden = !1;
+  e.innerHTML = `<h2>${s(n.b2b.portfolioTitle)}</h2>
+    <div class="work-grid">${t
+      .map((o) => {
+        const i = s(o.url),
+          r = s(o.title || "團隊作品"),
+          k = o.kicker ? `<p class="work-kicker">${s(o.kicker)}</p>` : "",
+          a = o.topic ? `<p class="work-topic">${s(o.topic)}</p>` : "",
+          u = o.views ? `<p class="work-views">${s(o.views)}</p>` : "",
+          d = s([o.kicker, o.title].filter(Boolean).join(" ")),
+          c = o.image
+            ? `<img src="${s(o.image)}" width="404" height="720" alt="${d || r}" loading="lazy">`
+            : "";
+        return `<article class="work-card">
+          <a class="work-thumb" href="${i}" target="_blank" rel="noopener noreferrer">
+            ${c}
+            <span class="work-play" aria-hidden="true"></span>
+          </a>
+          <div class="work-body">
+            ${k}
+            ${o.title ? `<h3>${r}</h3>` : ""}
+            ${a}
+            ${u}
+            <a class="btn ghost" href="${i}" target="_blank" rel="noopener noreferrer">觀看影片</a>
+          </div>
+        </article>`;
+      })
+      .join("")}</div>`;
 }
 function B() {
   const e = l("#includes");
