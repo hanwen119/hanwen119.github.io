@@ -56,7 +56,7 @@ const n = {
     hero: {
       eyebrow: "涵雯｜幸福媽媽設計師",
       lockedLine:
-        "別人教媽媽怎麼賣東西，我幫妳先找出妳能賣什麼\n然後在 90 天內把它做出來",
+        "別人教媽媽怎麼賣東西\n我幫妳先找出妳能賣什麼\n然後在 90 天內把它做出來",
       subline: "我相信每位媽媽都值得擁有既能陪伴孩子，又能成就自己的幸福事業。",
       support: "AI 和短影音是我陪妳把第一筆做出來的工具。",
       primaryCta: "先做 2 分鐘方向測驗",
@@ -73,6 +73,7 @@ const n = {
         "我突然發現我想要的不是一份高收入但忙碌的工作，而是一種在陪孩子長大的同時，也能發揮自我價值的生活。",
         "後來，我離開原本的工作，成為自由接案者",
         "現在，我開始陪伴跟我一樣的媽媽，運用AI 和短影音，從找到天賦、打造產品，到賺取收入。",
+        "我希望有一天，媽媽不用再在『陪孩子』和『賺收入』之間二選一。我想陪 10 萬名媽媽在家做出屬於自己的工作，自由選擇，親手打造她們想要的生活。",
       ],
       credentials: [
         "宏華國際（中華電信集團子公司）訓練師",
@@ -228,7 +229,7 @@ const n = {
         title: "90 天做出第一筆",
         text: "陪跑首發班，2027/2/15 開跑，限 6 位，候補中。",
         linePrompt: "陪跑",
-        cta: "加 LINE 跟我說「陪跑」",
+        cta: "加 LINE 了解陪跑",
       },
     },
     b2b: {
@@ -239,9 +240,8 @@ const n = {
       ],
       proofTitle: "我們做過的",
       proof: [
-        "由媽媽組成的剪輯團隊",
         "兩年交付 687 支影音，服務 26 個頻道／品牌",
-        "短影音、口播、Podcast 音檔、長影片、銷講簡報都做過",
+        "可製作項目：短影音、Podcast 音檔、長影片、銷講簡報",
       ],
       testimonialsTitle: "業主怎麼說",
       testimonials: [
@@ -305,9 +305,10 @@ const n = {
       {
         id: "proposal",
         title: "在家工作企畫書",
-        text: "想先把想法寫成一頁可以拿去談的企畫。跟我說一聲，我用同一個官方 LINE 給妳。",
+        text: "想先把想法寫成一頁可以拿去談的企畫。按下按鈕，LINE 會自動帶出關鍵字，送出就會收到。",
         url: "",
-        linePrompt: "我想要企畫書",
+        linePrompt: "企畫書",
+        cta: "加 LINE 索取企畫書",
       },
     ],
     faq: [
@@ -317,11 +318,11 @@ const n = {
       },
       {
         q: "課程放在哪裡？可以看多久？",
-        a: "課程放在我自己的 Notion 學員專區，購買後隨時觀看。每一堂有短影音、逐字稿，以及附 AI 助手的學習單，另外有 LINE 學員群和加碼頁面。",
+        a: "課程放在我自己的 Notion 學員專區，購買後隨時觀看。每一堂都有課程影片、完整文字稿、作業單，另外還有學員交流群組和加碼贈送的 7 大引流模組。",
       },
       {
         q: "為什麼現在是 5,990，之後會變 6,980？",
-        a: "因為課還在建置。現在的 5,990 是全部章節完成前的價格，二十堂都上線之後調為 6,980。頁面上沒有倒數計時。",
+        a: "因為課還在建置。現在的 5,990 是全部章節完成前的價格，二十堂都上線之後調為 6,980。",
       },
       {
         q: "上完會不會有一定的收入？",
@@ -415,10 +416,13 @@ function s(e) {
     .replaceAll('"', "&quot;");
 }
 function f(e) {
-  return n.line.primary;
+  const t = typeof e === "string" ? e.trim() : "";
+  return t
+    ? `https://line.me/R/oaMessage/@360ivkvs/?${encodeURIComponent(t)}`
+    : n.line.primary;
 }
 function h(e) {
-  return e ? `加 LINE · ${e}` : `加官方 LINE ${n.line.id}`;
+  return e ? `加 LINE · ${e}` : "加官方 LINE";
 }
 function E() {
   const e = n.course,
@@ -621,12 +625,11 @@ function P() {
       .map((t) => {
         const o = t.url || f(t.linePrompt),
           i = !!t.url,
-          r = i ? "打開這個工具" : h(t.linePrompt);
+          r = i ? "打開這個工具" : t.cta || h(t.linePrompt);
         return `<article class="resource">
         <h3>${s(t.title)}</h3>
         <p>${s(t.text)}</p>
-        <p><a href="${s(o)}" ${i ? 'target="_blank" rel="noopener noreferrer"' : ""}>${s(r)}</a></p>
-        <p class="muted">做完都回到同一個官方 LINE ${s(n.line.id)}。</p>
+        <p><a class="btn ghost" href="${s(o)}" ${i ? 'target="_blank" rel="noopener noreferrer"' : ""}>${s(r)}</a></p>
       </article>`;
       })
       .join(""));
@@ -672,7 +675,7 @@ function I() {
     <h3>${s(t.title)}</h3>
     <p>${s(t.text)}</p>
     ${o}
-    <a class="btn ghost" href="${s(f())}">${s(t.cta)}</a>
+    <a class="btn" href="${s(f(t.linePrompt))}">${s(t.cta)}</a>
   </article>`));
 }
 function S() {
@@ -680,8 +683,8 @@ function S() {
   e && (e.href = n.course.checkoutUrl);
   (L("[data-line-prompt]").forEach((o) => {
       const i = o.dataset.linePrompt;
-      ((o.href = f()),
-        o.dataset.lineText === "label" && (o.textContent = h(i)));
+      ((o.href = f(i),
+        o.dataset.lineText === "label" && (o.textContent = h(i))));
     }));
 }
 const c = { index: 0, answers: {} };
@@ -723,8 +726,8 @@ function F() {
     kicker: "比較適合的下一步",
     title: "先把在家工作排成一條看得到的路",
     body: `以妳的回答，自學課比再收集更多資訊更合適。《${n.course.title}》放在 Notion，現在 ${n.course.publishedLessons} 堂可以看，另外 ${n.course.totalLessons - n.course.publishedLessons} 堂即將上線。${n.course.priceNote}。這不是收入保證。`,
-    linePrompt: n.course.linePrompt,
-    button: h(n.course.linePrompt),
+    linePrompt: "",
+    button: "加官方 LINE",
   };
 }
 function H() {
@@ -733,7 +736,7 @@ function H() {
     id: "coaching",
     kicker: "比較適合的下一步",
     title: e.title,
-    body: `${e.text}加 LINE 後跟我說「${e.linePrompt}」，我會把候補方式告訴妳。`,
+    body: `${e.text}按下按鈕，LINE 會自動帶出關鍵字，送出就會收到候補方式。`,
     linePrompt: e.linePrompt,
     button: e.cta || h(e.linePrompt),
   };

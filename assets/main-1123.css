@@ -146,14 +146,14 @@ a:hover {
   display: grid;
   gap: 4px;
 }
-.nav a {
+.nav a:not(.btn) {
   color: var(--navy);
   text-decoration: none;
   font-weight: 600;
   padding: 10px 8px;
   border-radius: 10px;
 }
-.nav a:hover {
+.nav a:not(.btn):hover {
   background: var(--blush);
   color: var(--navy);
 }
@@ -648,8 +648,27 @@ details p {
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 14px;
+  gap: 8px 8px;
   margin: 14px 0;
+}
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1.3;
+  background: transparent;
+}
+.socials a:hover {
+  background: #fff;
+  color: var(--navy);
+  border-color: #fff;
 }
 .fine {
   color: #f7f2e7c7;
@@ -696,7 +715,7 @@ details p {
     align-items: center;
     gap: 4px;
   }
-  .nav a {
+  .nav a:not(.btn) {
     padding: 8px 10px;
   }
   .nav .btn {
@@ -763,6 +782,9 @@ details p {
 
 .h1-line {
   display: block;
+}
+.h1-line + .h1-line {
+  margin-top: 0.12em;
 }
 .b2b-head {
   display: grid;
@@ -832,13 +854,16 @@ details p {
 .btn:not(.ghost),
 a.btn:not(.ghost),
 .nav a.btn,
-.site-header .wrap > a.btn {
-  color: #fff;
+.nav a.btn:hover,
+.nav a.btn:focus,
+.site-header .wrap > a.btn,
+.site-header .wrap > a.btn:hover {
+  color: #fff !important;
   font-weight: 750;
 }
 .nav a.btn:hover,
 .btn:not(.ghost):hover {
-  color: #fff;
+  color: #fff !important;
 }
 .course-video {
   margin: 14px 0 18px;
