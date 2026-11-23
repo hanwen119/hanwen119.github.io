@@ -60,21 +60,28 @@ const n = {
       subline: "我相信每位媽媽都值得擁有既能陪伴孩子，又能成就自己的幸福事業。",
       support: "AI 和短影音是我陪妳把第一筆做出來的工具。",
       primaryCta: "先做 2 分鐘方向測驗",
-      lineCta: "已經知道要找我？加官方 LINE",
+      lineCta: "直接找涵雯",
     },
     about: {
-      lead: "我是涵雯。在成為媽媽以前，我的工作是把很難的東西教到別人做得到。",
+      lead: "我是涵雯。在成為媽媽以前，我的工作就是把很難的東西教到別人做得到",
       paragraphs: [
-        "我在宏華國際做了十年企業內訓。那是中華電信集團的子公司。我從門市銷售走到訓練師，後來負責教材，擔任教材組組長。十年前我第一次碰影片，是為公司做影音教材，當時又重又慢，還得靠高階設備。我也獨力寫過一本 300 頁的產品百科，給第一線的人拿去用。",
-        "有一次出差，我在高鐵上接到女兒的電話。她哭著問我什麼時候回來、說她想我。那幾年我以為是自己不夠努力，後來才發現方向錯了，多做只是多累。我想要的不是一份更忙的工作，是一條帶著孩子也走得下去的路。",
-        "離開原本的節奏之後，我開始陪跟我一樣的媽媽：先找出能賣的那一件，再在 90 天裡把它做出來。AI 和短影音是這段路上的工具。我考了高雄市政府青年局的新媒體行銷管理師。",
+        "我在中華電信集團做了十年，從門市銷售到負責企業內訓的訓練師，教過數千位學員",
+        "十年前我第一次碰影片，是為公司做影音教材，當時的工作流繁雜又冗長",
+        "我也獨力寫過一本 300 頁的產品百科，讓第一線的櫃檯人員方便自學增加手機的專業知識。",
+        "那時的我覺得這就是我一生最想做的工作。直到女兒出生之後...",
+        "有一次出差，我在高鐵上接到女兒的電話。她哭著問我什麼時候回來、說她想我",
+        "我突然發現我想要的不是一份高收入但忙碌的工作，而是一種在陪孩子長大的同時，也能發揮自我價值的生活。",
+        "後來，我離開原本的工作，成為自由接案者",
+        "現在，我開始陪伴跟我一樣的媽媽，運用AI 和短影音，從找到天賦、打造產品，到賺取收入。",
       ],
       credentials: [
-        "宏華國際（中華電信集團子公司）十年：門市一路做到副店長，後轉 Training Team 訓練師六年",
-        "教材組組長，帶約 10 人，也負責訓練師徵選",
+        "宏華國際（中華電信集團子公司）訓練師",
         "高雄市政府青年局認證新媒體行銷管理師",
         "MomPower 媽媽商學院講師",
         "曾任 MomPower 家庭財務規劃師",
+        "她渴望協會、心流逸境教育平台、慈濟客座講師",
+        "POY牌卡引導師",
+        "佳興成長營教育顧問",
       ],
     },
     media: {
@@ -97,13 +104,13 @@ const n = {
           id: "brand-intro",
           title: "幸福媽媽設計師",
           url: "https://www.youtube.com/watch?v=WwbK4-4XE1k",
-          visible: !0,
+          visible: !1,
         },
         {
           id: "design-happiness",
           title: "設計幸福",
           url: "https://www.youtube.com/shorts/ivx2FpdRSw8",
-          visible: !0,
+          visible: !1,
         },
         {
           id: "kids-money",
@@ -123,16 +130,15 @@ const n = {
       publishedLessons: 8,
       delivery:
         "課程放在 Notion 學員專區。購買並開通後，可隨時觀看已上架的單元。",
-      accessLabel: "永久觀看（課程持續營運期間）。",
+      accessLabel: "",
       buyMode: "line",
       checkoutUrl:
         "https://docs.google.com/forms/d/e/1FAIpQLSek1wkaHJY-XT0y6FKBOaPRMRq6BW9n82QVJjo2J4FLcgoI0w/viewform",
       linePrompt: "我想看致富寶典",
       includes: [
-        "已上架的每一堂：短影音、完整文字稿、作業單",
-        "作業單可以印出來，或複製到自己的 Google 雲端，用 AI 協助檢查",
-        "購買後有 LINE 學員群，邀請只給已開通的學員",
-        "加碼方向有「7 大引流模組」，其餘系統陸續上架",
+        "課程內容包含：課程影片、完整文字稿、作業單",
+        "學員交流群組，跟一群正在努力的媽媽一起成長",
+        "加碼贈送：7大引流模組",
       ],
       chapters: [
         {
@@ -232,23 +238,25 @@ const n = {
     },
     b2b: {
       title: "企業／品牌影音合作",
-      lead: "這頁給品牌、講師和企業。媽媽要找的自學課和陪跑，在首頁。",
-      team: "帶出 20 位媽媽組成的剪輯接案團隊",
-      credential: "十年企業訓練師、教材組組長",
+      team: "由媽媽組成的剪輯團隊",
       points: [
-        "短影音、口播和音檔，依案子報價",
-        "範圍、支數和交期，在 LINE 上先講清楚",
+        "短影音、口播、音檔、銷講簡報都能做，範圍、支數和交期先在 LINE 談好，再依案子報價。",
+      ],
+      proofTitle: "我們做過的",
+      proof: [
+        "由媽媽組成的剪輯團隊",
+        "兩年交付 687 支影音，服務 26 個頻道／品牌",
+        "短影音、口播、Podcast 音檔、長影片、銷講簡報都做過",
+      ],
+      testimonialsTitle: "業主怎麼說",
+      testimonials: [
+        { quote: "真的超讚，我超愛！真是麻煩妳了，超有心的。", by: "合作行銷公司" },
+        { quote: "這次短影音剪得超好，節奏感抓得很不錯！", by: "品牌客戶" },
       ],
       processTitle: "合作流程",
-      process: ["詢問", "回答四個問題", "報價"],
-      questions: [
-        "母片多長？",
-        "素材有沒有標好哪段放哪？",
-        "要幾支？需不需要直式＋橫式兩種版本？",
-        "腳本由你們提供，還是我寫？",
-      ],
-      linePrompt: "我想問企業影音合作",
-      cta: "加 LINE 詢問報價",
+      process: ["詢問", "確認需求", "報價"],
+      lineUrl: "https://line.me/R/oaMessage/@360ivkvs/?%E5%89%AA%E8%BC%AF%E5%A0%B1%E5%83%B9",
+      cta: "用 LINE 詢問報價",
       portfolioTitle: "團隊作品",
       portfolio: [
         { id: "work-1", title: "", url: "", visible: !1 },
@@ -314,7 +322,7 @@ const n = {
       },
       {
         q: "課程放在哪裡？可以看多久？",
-        a: "課程放在我自己的 Notion 學員專區，購買後隨時觀看。永久觀看（課程持續營運期間）。每一堂有短影音、逐字稿，以及附 AI 助手的學習單，另外有 LINE 學員群和加碼頁面。",
+        a: "課程放在我自己的 Notion 學員專區，購買後隨時觀看。每一堂有短影音、逐字稿，以及附 AI 助手的學習單，另外有 LINE 學員群和加碼頁面。",
       },
       {
         q: "為什麼現在是 5,990，之後會變 6,980？",
@@ -512,11 +520,17 @@ function A() {
   if (!e || !n.b2b) return;
   const t = n.b2b,
     o = t.points.map((a) => `<li>${s(a)}</li>`).join(""),
-    q4 = t.questions.map((a) => `<li>${s(a)}</li>`).join(""),
     steps = t.process
       .map(
         (a, k) =>
-          `<li class="step"><span class="step-no">${k + 1}</span><div><strong>${s(a)}</strong>${k === 1 ? `<ul class="include-list">${q4}</ul>` : ""}</div></li>`,
+          `<li class="step"><span class="step-no">${k + 1}</span><div><strong>${s(a)}</strong></div></li>`,
+      )
+      .join(""),
+    proof = (t.proof || []).map((a) => `<li>${s(a)}</li>`).join(""),
+    tms = (t.testimonials || [])
+      .map(
+        (a) =>
+          `<figure class="quote b2b-quote"><p>「${s(a.quote)}」</p><footer>— ${s(a.by)}</footer></figure>`,
       )
       .join("");
   e.innerHTML = `
@@ -524,19 +538,24 @@ function A() {
       <div>
         <p class="eyebrow">${s(t.title)}</p>
         <h1>${s(t.team)}</h1>
-        <p class="b2b-cred">${s(t.credential)}</p>
-        <p class="lede">${s(t.lead)}</p>
         <ul class="include-list">${o}</ul>
       </div>
       <figure class="b2b-photo">
         <img src="./photos/b2b-hero.jpg" width="665" height="1182" alt="潘涵雯，長髮，黑色上衣，雙手交叉" fetchpriority="high">
       </figure>
     </div>
+    <section class="b2b-proof">
+      <h2>${s(t.proofTitle)}</h2>
+      <ul class="proof-list">${proof}</ul>
+    </section>
+    <section class="b2b-testimonials">
+      <h2>${s(t.testimonialsTitle)}</h2>
+      <div class="quotes">${tms}</div>
+    </section>
     <h2>${s(t.processTitle)}</h2>
     <ol class="steps">${steps}</ol>
     <div class="stack">
-      <a class="btn" href="${s(f())}">${s(t.cta)}</a>
-      <a class="text-link" href="./index.html">回媽媽的首頁</a>
+      <a class="btn" href="${s(t.lineUrl || f())}">${s(t.cta)}</a>
     </div>
     <section id="b2b-portfolio" class="b2b-portfolio" hidden></section>
   `;
@@ -667,10 +686,8 @@ function I() {
 }
 function S() {
   const e = l("#course-buy");
-  e && ((e.href = f()), (e.textContent = h(n.course.linePrompt)));
-  const t = l("#course-alt");
-  (t && ((t.hidden = !1), (t.href = n.course.checkoutUrl)),
-    L("[data-line-prompt]").forEach((o) => {
+  e && (e.href = n.course.checkoutUrl);
+  (L("[data-line-prompt]").forEach((o) => {
       const i = o.dataset.linePrompt;
       ((o.href = f()),
         o.dataset.lineText === "label" && (o.textContent = h(i)));
