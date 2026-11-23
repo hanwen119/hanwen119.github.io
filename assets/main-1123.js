@@ -220,11 +220,6 @@ const n = {
       ],
     },
     offers: {
-      diagnosis: {
-        title: "免費 30 分鐘診斷",
-        text: "還說不出自己能賣什麼，就先約一次。名額有限，從官方 LINE 預約。這一次不收費。",
-        linePrompt: "我想約免費診斷",
-      },
       coaching: {
         enabled: !0,
         showPrice: !1,
@@ -333,10 +328,6 @@ const n = {
         a: "不會。我不保證收入。我可以給路徑、示範和回饋，賺不賺得到，還是看妳的時間、作品和客人。",
       },
       {
-        q: "免費 30 分鐘診斷怎麼約？",
-        a: "加官方 LINE @360ivkvs，跟我說想約免費診斷。名額有限，這一次不收費。",
-      },
-      {
         q: "品牌或企業要剪影片，要去哪裡問？",
         a: "請看頁尾的「企業／品牌影音合作」。用 LINE 詢問。",
       },
@@ -346,7 +337,7 @@ const n = {
       },
       {
         q: "我完全沒做過內容，聽得懂嗎？",
-        a: "測驗和免費診斷就是給還沒開始的人。自學課也是照自己的步調看，不需要先會剪輯。",
+        a: "測驗就是給還沒開始的人。自學課也是照自己的步調看，不需要先會剪輯。",
       },
     ],
     leadForm: { enabled: !1, provider: "formspree", endpoint: "" },
@@ -354,7 +345,7 @@ const n = {
       storageKey: "hmt.quiz.v2",
       title: "2 分鐘，看妳現在該自己看，還是進陪跑候補",
       intro:
-        "六題，沒有對錯。做完會給妳一個下一步：免費診斷、自學課，或陪跑候補，並請妳加到同一個官方 LINE。",
+        "六題，沒有對錯。做完會給妳一個下一步：先加 LINE 聊聊、自學課，或陪跑候補，並請妳加到同一個官方 LINE。",
       questions: [
         {
           id: "stage",
@@ -389,7 +380,7 @@ const n = {
           options: [
             { id: "self", label: "自己看，照自己的步調" },
             { id: "cohort", label: "一小群一起，有人帶" },
-            { id: "talk", label: "先跟我談 30 分鐘" },
+            { id: "talk", label: "先跟涵雯聊聊再決定" },
           ],
         },
         {
@@ -751,10 +742,10 @@ function y() {
   return {
     id: "diagnosis",
     kicker: "先不要急著買",
-    title: "先用 30 分鐘把能賣的那一件說清楚",
-    body: "以妳現在的回答，比較合適的是免費 30 分鐘診斷。這一次不收費，名額有限。談完再決定要自己看自學課，還是加入陪跑候補。",
-    linePrompt: n.offers.diagnosis.linePrompt,
-    button: h(n.offers.diagnosis.linePrompt),
+    title: "先跟涵雯聊聊妳現在的狀況",
+    body: "以妳現在的回答，建議先加官方 LINE 跟我聊聊，把妳能賣的那一件說清楚，再決定要自己看自學課，還是加入陪跑候補。",
+    linePrompt: "",
+    button: "加 LINE 跟涵雯聊聊",
   };
 }
 function b() {
