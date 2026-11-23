@@ -1013,3 +1013,13 @@ a.btn:not(.ghost),
     font-size: 0.98rem;
   }
 }
+
+.stats-takeaway {
+  margin: 28px auto 0;
+  max-width: 40em;
+  text-align: center;
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.7;
+  color: var(--ink, #1f2a5a);
+}
